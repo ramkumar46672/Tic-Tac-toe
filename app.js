@@ -3,8 +3,8 @@ let reset_btn = document.querySelector(".reset-btn");
 let newgamebtn = document.querySelector("#new-btn");
 let msgcontainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let count = 1;
 
-var a = 5;
 let turnO = true;
 const winPatterns = [
   [0, 1, 2],
@@ -20,17 +20,30 @@ const winPatterns = [
   turnO = true;
   enablebox();
   msgcontainer.classList.add("hide");
+  count = 1;
  }
 boxes.forEach((box)=>{
     box.addEventListener("click", () => {
-        box.innerText = "R";
+        if(count == 9){
+          msg.innerText = "Match Draw";
+          msgcontainer.classList.remove("hide");
+          reset_btn.addEventListener("click", resetgame);
+          disablebox();
+          count = 0;
+        }
+        count ++;
         if(turnO){
           box.innerText = "X";
+           box.style.color = "#355070";
           turnO = false;
+         
+          
         }
         else{
           box.innerText = "O";
+          box.style.color = "#e56b6f";
           turnO = true;
+          
         }
         box.disabled = true;//disable button
         checkWinner();

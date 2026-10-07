@@ -3,7 +3,7 @@
     margin: 0px;
 }
 body{
-    background-color: rgb(226, 122, 238);
+    background-color: #6d597a;
     text-align: center;
 }
 .container{
@@ -35,7 +35,7 @@ body{
 .reset-btn{
     padding: 1rem;
     font-size: 1.5rem;
-    background-color: rgb(61, 193, 255);
+    background-color: #eaac8b;
     color: antiquewhite;
     border: none;
     border-radius: 1rem;
@@ -43,7 +43,7 @@ body{
 #new-btn{
  padding: 1rem;
     font-size: 1.5rem;
-    background-color: rgb(61, 193, 255);
+    background-color: #eaac8b;
     color: antiquewhite;
     border: none;
     border-radius: 1rem;
